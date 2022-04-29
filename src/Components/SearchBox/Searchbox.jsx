@@ -16,7 +16,6 @@ const SearchBox = () => {
     potentialUsers,
   } = useSearchBox();
 
- 
   return (
     <StyledSearchBox>
       <input
@@ -29,7 +28,11 @@ const SearchBox = () => {
         <div className="dropdown">
           {potentialUsers.map((name, index) => {
             return (
-             <UserSuggestion key={index} name={name} setTextInSearchBar={setTextInSearchBar}/>
+              <UserSuggestion
+                key={index}
+                name={name}
+                setTextInSearchBar={setTextInSearchBar}
+              />
             );
           })}
         </div>
